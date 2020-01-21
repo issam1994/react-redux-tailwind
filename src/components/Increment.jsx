@@ -1,9 +1,12 @@
 import React from 'react'
+import {useDispatch} from 'react-redux';
+import {increment} from '../store/actions/counterActions'
 
 export default function Display(props) {
+    const dispatch = useDispatch();
     return (
         <div className="px-2">
-           <button className="px-8 py-3 bg-green-500 text-white rounded-lg shadow">Increment</button>
+           <button onClick={() => dispatch(increment())} className="px-8 py-3 bg-green-500 text-white rounded-lg shadow">Increment</button>
         </div>
     )
 }
