@@ -1,17 +1,22 @@
 import React from 'react';
-import Display from './components/Display'
-import Increment from './components/Increment'
-import Decrement from './components/Decrement'
-
+import Nav from './components/Nav'
+import Counter from './views/Counter'
+import About from './views/About'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+const Home = () => (<div class="text-center text-2xl font-thin">Home Page</div>);
 function App() {
   return (
-    <div className="App pt-8">
-      <Display />
-      <div className="flex justify-center mt-8">
-      <Decrement />
-      <Increment />
+    <Router>
+      <div className="App">
+        <Nav />
+        <hr className="mb-6" />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/counter" component={Counter} />
+          <Route path="/about" component={About} />
+        </Switch>
       </div>
-    </div>
+    </Router>
   );
 }
 
