@@ -5,7 +5,7 @@ import Product from '../components/shop/Product'
 import Cart from '../components/shop/Cart'
 
 export default function Shop() {
-    return (<div class="container mx-auto pt-16">
+    return (<div className="container mx-auto pt-16">
         <Sizes />
         <Product />
         <Cart />
