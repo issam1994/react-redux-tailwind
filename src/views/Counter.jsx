@@ -1,7 +1,7 @@
 import React from 'react';
-import Display from '../components/Display'
-import Increment from '../components/Increment'
-import Decrement from '../components/Decrement'
+import Display from '../components/counter/Display'
+import Increment from '../components/counter/Increment'
+import Decrement from '../components/counter/Decrement'
 
 function Counter() {
   return (
