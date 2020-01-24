@@ -13,8 +13,8 @@ import { useTransition, animated } from 'react-spring'
 const AnimatedViews = () => {
   const location = useLocation();
   const transitions = useTransition(location, location => location.pathname, {
-    from: { transform: 'translateX(40px)' },
-    enter: { transform: 'translateX(0)' },
+    from: { marginLeft: '50px' },
+    enter: { marginLeft: '0' },
     leave: {position: 'absolute', opacity: 0 },
   });
   return transitions.map(({ item, props, key }) =>

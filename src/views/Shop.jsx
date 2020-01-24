@@ -5,11 +5,13 @@ import Product from '../components/shop/Product'
 import Cart from '../components/shop/Cart'
 
 export default function Shop() {
-    return (<div className="container mx-auto pt-16 text-gray-800">
+    return (
+    <div className="container mx-auto pt-16 text-gray-800">
         <div className="flex justify-around">
         <Sizes />
         <Product />
         <Cart />
         </div>
-    </div>)
+    </div>
+    )
 }

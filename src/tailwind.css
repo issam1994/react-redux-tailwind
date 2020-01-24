@@ -3,8 +3,17 @@
 @tailwind utilities;
 
 .transition {
-    transition: all .3s ease-in;
+    transition: all .2s ease-in;
 }
 .product:hover .add-product{
     @apply bg-yellow-500;
 }
+.right-full {
+    right: 100%;
+}
+.left-full {
+    left: 100%;
+}
+.top-shadow {
+    box-shadow: 0 0 20px black;
+  }
