@@ -48,18 +48,18 @@ export default function Shop() {
     }
     //filter controls
     const activeFilterStyle = (size) => {
-        if(filter.includes(size)){
-            return {backgroundColor: '#333', color:'white'}
+        if (filter.includes(size)) {
+            return { backgroundColor: '#333', color: 'white' }
         }
         return {}
     }
     const handleFilterChange = (size) => {
         console.log("checked filter", size)
         setFilter(() => {
-            if (!filter.includes(size)) {
-                return [...filter, size]
+            if (filter.includes(size)) {
+                return filter.filter(f => f !== size);
             }
-            return filter.filter(f => f !== size);
+            return [...filter, size]
         })
     }
     const filterBy = (products) => {
@@ -71,11 +71,11 @@ export default function Shop() {
     console.log("filter", filter)
     return (
         <div className="container mx-auto pt-16 text-gray-800">
-            <div className="flex">
+            <div className="flex flex-wrap sm:flex-no-wrap">
                 {/* sizes  */}
-                <div className="">
-                    <div className="mb-2 px-1 text-lg font-semibold">Sizes:</div>
-                    <div className="flex flex-wrap w-48">
+                <div className="w-full sm:w-3/12 px-4 lg:w-56 flex-none">
+                    <div className="mb-2 px-1 text-lg font-semibold text-center sm:text-left">Sizes:</div>
+                    <div className="flex flex-wrap justify-center sm:justify-start">
                         {sizes.map((s, i) =>
                             <div onClick={() => handleFilterChange(s)} style={activeFilterStyle(s)} className="overflow-hidden w-10 h-10 mx-1 my-2 flex-none rounded-full bg-gray-200 hover:bg-gray-300 flex justify-center items-center text-xs cursor-pointer" key={i}>
                                 <span>{s}</span>
@@ -84,19 +84,19 @@ export default function Shop() {
                 </div>
                 {/* products  */}
                 <div className="flex-auto">
-                    <div className="text-gray-600 flex justify-between items-center px-2 pb-2">
-                        <div className="text-sm">{products.length} Product(s) found</div>
-                        <div className="flex items-center justify-center">
+                    <div className="text-gray-700 flex flex-col sm:flex-row justify-between items-center px-2">
+                        <div className="text-sm mb-2">{filterBy(products).length} Product(s) found</div>
+                        <div className="flex items-center justify-center mb-2">
                             <div className="">Order by:</div>
-                            <select onChange={handleOrderChange} className="font-semibold ml-2 p-1 border hover:border-gray-800">
+                            <select onChange={handleOrderChange} className=" font-medium ml-2 p-1 border hover:border-gray-800">
                                 {orderOptions.map(op => <option key={op.value} value={op.value}>{op.label}</option>)}
                             </select>
                         </div>
                     </div>
                     <ProductsList products={orderBy(filterBy(products))} />
                 </div>
-                <Cart />
             </div>
+            <Cart />
         </div>
     )
 }

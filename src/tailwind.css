@@ -2,27 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-.transition {
-  transition: all 0.2s ease-in;
-}
-.product:hover .add-product {
-  @apply bg-yellow-500;
-}
-.right-full {
-  right: 100%;
-}
-.left-full {
-  left: 100%;
-}
-.top-shadow {
-  box-shadow: 20px 25px 50px black;
-}
-.decoration-none {
-  text-decoration: none;
-}
-.btn:active {
-  @apply opacity-50;
-}
-.btn:disabled {
-  @apply opacity-25 bg-gray-900 cursor-not-allowed;
+@responsive {
+  .transition {
+    transition: all 0.2s ease-in;
+  }
+  .product:hover .add-product {
+    @apply bg-yellow-500;
+  }
+  .right-full {
+    right: 100%;
+  }
+  .left-full {
+    left: 100%;
+  }
+  .cart-visible {
+    left: auto;
+    right: 0;
+  }
+  .cart-hidden {
+    left: auto;
+    right: -28rem;
+  }
+  .cart-visible-mobile {
+    left: 0;
+  }
+  .cart-hidden-mobile {
+    left: 100%;
+  }
+  .top-shadow {
+    box-shadow: 20px 25px 50px black;
+  }
+  .decoration-none {
+    text-decoration: none;
+  }
+  .btn:active {
+    @apply opacity-50;
+  }
+  .btn:disabled {
+    @apply opacity-25 bg-gray-900 cursor-not-allowed;
+  }
 }

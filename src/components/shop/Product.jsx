@@ -25,7 +25,7 @@ export default function Product({product}) {
             <div className="text-sm tracking-wide p-4">
                 <span className="mx-1">$</span>
                 <span className="text-2xl font-semibold">{(price+"").split(".")[0]}</span>
-                <span className="">.{(price+"").split(".")[1]}</span>
+                <span className="">{(price+"").split(".")[1] && '.' + (price+"").split(".")[1]}</span>
             </div>
             {/* action button  */}
             <div className="w-full">

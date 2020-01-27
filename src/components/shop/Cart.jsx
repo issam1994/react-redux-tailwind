@@ -9,7 +9,7 @@ import { mdiCartOutline } from '@mdi/js'
 export default function Cart() {
     const dispatch = useDispatch()
     //show cart once component did mount after a few milleseconds
-    useEffect(() => { /*setTimeout(() => dispatch(toggleCart()), 800)*/ }, [dispatch])
+    // useEffect(() => { setTimeout(() => dispatch(toggleCart()), 800) }, [dispatch])
     //cart visibility state
     const visibility = useSelector(state => state.shop.cartVisibility)
     //number of cart items
@@ -21,10 +21,10 @@ export default function Cart() {
     //checkout
     const handleCheckout = () => totalPrice() > 0 && alert(`Total price is : $ ${totalPrice()}`)
     return (
-        <div className="fixed bg-gray-900 w-1/2 max-w-md z-50 top-0 right-0 bottom-0 shadow transition" style={{ right: visibility ? '0' : '-28rem' }}>
+        <div className={"fixed bg-gray-900 w-full sm:max-w-md z-50 top-0 right-0 bottom-0 shadow transition" + " " + (visibility ? "cart-visible-mobile sm:cart-visible": "cart-hidden-mobile sm:cart-hidden") }>
             <div className="relative h-full">
                 {/* toggle button  */}
-                <button onClick={() => dispatch(toggleCart())} className="focus:outline-none absolute top-0 right-full w-16 h-16 flex justify-center items-center text-2xl text-white bg-gray-900">
+                <button onClick={() => dispatch(toggleCart())} className="focus:outline-none absolute top-0 sm:right-full w-16 h-16 flex justify-center items-center text-2xl text-white bg-gray-900" style={!visibility? {right: '100%'} : {}}>
                     {visibility ?
                         <span  >X</span>
                         :
