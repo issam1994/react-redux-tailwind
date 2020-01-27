@@ -8346,6 +8346,12 @@ video {
   z-index: auto;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .transition {
   transition: all 0.2s ease-in;
 }

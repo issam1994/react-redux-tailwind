@@ -8,7 +8,7 @@ function Nav() {
         { name: 'Shop', path: '/shop' },
     ];
     return (
-        <div className="flex justify-center items-center font-semibold text-lg text-white bg-gray-800">
+        <div className="flex justify-center items-center font-semibold text-lg text-gray-700 bg-white ">
             {pages.map((p, i) => <Link key={i} to={p.path}>
                 <div className="px-4 py-4 hover:bg-white hover:text-gray-800 cursor-pointer">{p.name}</div>
             </Link>)}
