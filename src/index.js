@@ -3,15 +3,9 @@ import ReactDOM from 'react-dom';
 import './styles.css'; //tailwind generated styles
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
-// redux store
-import {createStore} from 'redux';
-import {counterReducer} from './store/reducers/counterReducer'
 import {Provider} from 'react-redux'
-
-let store = createStore(counterReducer);
-
-//
+//redux store
+import store from './store'
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 

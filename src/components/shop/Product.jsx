@@ -1,24 +1,31 @@
 import React from 'react';
+import {useDispatch} from 'react-redux'
+import {addToCart} from '../../store/actions/shopActions'
 
-export default function Product() {
+export default function Product({product}) {
+    //extract data from props
+    let {title, price, image} = product;
+    //
+    const dispatch = useDispatch();
+    //
     return (
-        <div className="flex flex-col items-center p-2 border border-gray-100 hover:border-gray-300 cursor-pointer product">
+        <div onClick={() => dispatch(addToCart(product))} className=" w-2/4 md:w-1/3 lg:w-1/4 flex flex-col items-center p-2 border border-white hover:border-gray-300 cursor-pointer product">
             {/* image  */}
             <div className="relative">
-                <img src="https://react-shopping-cart-67954.firebaseapp.com/static/media/12064273040195392_1.2995d79a.jpg" alt="product" />
+                <img src={image} alt={title} />
                 <div className="absolute top-0 right-0 text-xs bg-gray-800 text-white p-1">Free shipping</div>
             </div>
             {/* title  */}
-            <div className="text-lg font-medium py-4">
-                Cat Tee Black T-Shirt
+            <div className="flex justify-center items-center text-lg text-center font-medium h-16 px-2 mt-1">
+                {title}
         </div>
             {/* colored line */}
             <hr className="border-orange-500 w-8" />
             {/* price  */}
             <div className="text-sm tracking-wide p-4">
                 <span className="mx-1">$</span>
-                <span className="text-2xl font-semibold">10</span>
-                <span className="">.90</span>
+                <span className="text-2xl font-semibold">{(price+"").split(".")[0]}</span>
+                <span className="">.{(price+"").split(".")[1]}</span>
             </div>
             {/* action button  */}
             <div className="w-full">
