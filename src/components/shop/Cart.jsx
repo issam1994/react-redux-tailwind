@@ -9,7 +9,7 @@ import { mdiCartOutline } from '@mdi/js'
 export default function Cart() {
     const dispatch = useDispatch()
     //show cart once component did mount after a few milleseconds
-    useEffect(() => { setTimeout(() => dispatch(toggleCart()), 800) }, [dispatch])
+    useEffect(() => { /*setTimeout(() => dispatch(toggleCart()), 800)*/ }, [dispatch])
     //cart visibility state
     const visibility = useSelector(state => state.shop.cartVisibility)
     //number of cart items
