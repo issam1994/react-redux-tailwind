@@ -339,7 +339,6 @@ const addToCart = (state, product) => {
 }
 //
 const removeFromCart = (state, itemId) => {
-  console.log("going to delete ...", itemId)
   let cart = state.cart.filter(item => item.product.id !== itemId);
   return {...state, cart};
 }
