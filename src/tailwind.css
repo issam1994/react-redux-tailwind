@@ -42,6 +42,6 @@
     @apply opacity-50;
   }
   .btn:disabled {
-    @apply opacity-25 bg-gray-900 cursor-not-allowed;
+    @apply opacity-25 bg-black cursor-not-allowed;
   }
 }

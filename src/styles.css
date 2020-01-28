@@ -8400,7 +8400,7 @@ video {
 
 .btn:disabled {
   opacity: 0.25;
-  background-color: #1a202c;
+  background-color: #000;
   cursor: not-allowed;
 }
 
@@ -16189,7 +16189,7 @@ video {
 
   .sm\:btn:disabled {
     opacity: 0.25;
-    background-color: #1a202c;
+    background-color: #000;
     cursor: not-allowed;
   }
 }
@@ -23979,7 +23979,7 @@ video {
 
   .md\:btn:disabled {
     opacity: 0.25;
-    background-color: #1a202c;
+    background-color: #000;
     cursor: not-allowed;
   }
 }
@@ -31769,7 +31769,7 @@ video {
 
   .lg\:btn:disabled {
     opacity: 0.25;
-    background-color: #1a202c;
+    background-color: #000;
     cursor: not-allowed;
   }
 }
@@ -39559,7 +39559,7 @@ video {
 
   .xl\:btn:disabled {
     opacity: 0.25;
-    background-color: #1a202c;
+    background-color: #000;
     cursor: not-allowed;
   }
 }
