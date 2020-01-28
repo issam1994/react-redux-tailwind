@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 //state imports
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchProducts } from '../store/actions/shopActions'
@@ -16,13 +16,13 @@ export default function Shop() {
     //order state
     const [order, setOrder] = useState('');
     const orderOptions = [
-    { label: 'Select', value: '' },
-    { label: 'Lowest to highest', value: 'toHighest' },
-    { label: 'Highest to lowest', value: 'toLowest' }
+        { label: 'Select', value: '' },
+        { label: 'Lowest to highest', value: 'toHighest' },
+        { label: 'Highest to lowest', value: 'toLowest' }
     ]
     // filter state
     const [filter, setFilter] = useState([])
-    const getAvailableSizes = () => {
+    const getAvailableSizes = (products) => {
         //sizes may contain duplicates
         let sizes = products.map((s) => (s.availableSizes)).flat()
         // let's get rid of them
@@ -30,18 +30,17 @@ export default function Shop() {
         sizes.forEach(s => !newSizes.includes(s) && newSizes.push(s))
         return newSizes
     }
-    const sizes = getAvailableSizes()
+    const sizes = useMemo(() => getAvailableSizes(products), [products]);
     //order controls
     const handleOrderChange = (e) => {
-        console.log('order changed to', e.target.value);
         setOrder(e.target.value);
     }
     const orderBy = (products) => {
         if (order === 'toLowest') {
-            return products.sort((a, b) => b.price - a.price)
+            return [...products].sort((a, b) => b.price - a.price)
         }
         else if (order === 'toHighest') {
-            return products.sort((a, b) => a.price - b.price)
+            return [...products].sort((a, b) => a.price - b.price)
         }
         else {
             return products;
@@ -55,7 +54,6 @@ export default function Shop() {
         return {}
     }
     const handleFilterChange = (size) => {
-        console.log("checked filter", size)
         setFilter(() => {
             if (filter.includes(size)) {
                 return filter.filter(f => f !== size);
@@ -69,7 +67,7 @@ export default function Shop() {
         }
         return products.filter(p => p.availableSizes.some(s => filter.includes(s)))
     };
-    console.log("filter", filter)
+
     return (
         <div className="container mx-auto pt-16 text-gray-800">
             <div className="flex flex-wrap sm:flex-no-wrap">
