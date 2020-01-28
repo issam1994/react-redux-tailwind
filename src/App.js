@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="App overflow-hidden">
         <Nav />
-        <hr className="mb-6 w-3/4" />
+        <hr className="mb-6" />
         <AnimatedViews />
       </div>
     </Router>

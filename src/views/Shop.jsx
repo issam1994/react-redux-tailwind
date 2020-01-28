@@ -15,7 +15,8 @@ export default function Shop() {
     const products = useSelector(state => state.shop.products);
     //order state
     const [order, setOrder] = useState('');
-    const orderOptions = [{ label: 'Select', value: '' },
+    const orderOptions = [
+    { label: 'Select', value: '' },
     { label: 'Lowest to highest', value: 'toHighest' },
     { label: 'Highest to lowest', value: 'toLowest' }
     ]
