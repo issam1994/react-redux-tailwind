@@ -1,6 +1,6 @@
 import React from 'react'
 import {useDispatch} from 'react-redux';
-import {decrement} from '../../store/actions/counterActions'
+import {decrement} from '../../store/counter/actions'
 
 export default function Display(props) {
     const dispatch = useDispatch();

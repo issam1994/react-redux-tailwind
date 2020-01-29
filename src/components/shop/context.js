@@ -1,6 +1,6 @@
 import React, {useState, useEffect, createContext} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchProducts } from '../../store/actions/shopActions'
+import { fetchProducts } from '../../store/shop/actions'
 //init context
 export const ProductsContext = createContext();
 

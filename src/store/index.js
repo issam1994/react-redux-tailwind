@@ -1,8 +1,8 @@
 // redux
 import {createStore, combineReducers} from 'redux';
 // reducers
-import {counterReducer as counter} from './reducers/counterReducer'
-import {shopReducer as shop} from './reducers/shopReducer'
+import {counterReducer as counter} from './counter/reducers'
+import {shopReducer as shop} from './shop/reducers/'
 //combine reducers
 const rootReducer = combineReducers({counter, shop})
 // init store

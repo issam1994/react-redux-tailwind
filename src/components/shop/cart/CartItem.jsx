@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
-import { removeFromCart, incrementQuantity, decrementQuantity } from '../../../store/actions/shopActions'
+import { removeFromCart, incrementQuantity, decrementQuantity } from '../../../store/shop/actions'
 
 export default function CartItem({ item, index }) {
     //style state
