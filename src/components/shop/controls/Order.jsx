@@ -14,9 +14,9 @@ export default function Order() {
         setOrder(e.target.value);
     }
     return (
-        <div className="flex items-center justify-center mb-2">
+        <div className="flex items-center font-medium text-gray-900 justify-center mb-2">
             <div className="">Order by:</div>
-            <select onChange={handleOrderChange} className=" font-medium ml-2 p-1 border hover:border-gray-800">
+            <select onChange={handleOrderChange} className="ml-2 p-1 border hover:border-gray-800">
                 {orderOptions.map(op => <option key={op.value} value={op.value}>{op.label}</option>)}
             </select>
         </div>
