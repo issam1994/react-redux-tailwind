@@ -1,12 +1,12 @@
 import React from 'react';
 //Context Provider
-import {ProductsContextProvider} from '../components/shop/productsContext'
+import {ProductsContextProvider} from '../components/shop/context'
 //importing components
-import Sizes from '../components/shop/Sizes'
-import Order from '../components/shop/Order'
-import ProductsList from '../components/shop/ProductsList'
-import ProductsCount from '../components/shop/ProductsCount'
-import Cart from '../components/shop/Cart'
+import Sizes from '../components/shop/controls/Sizes'
+import Order from '../components/shop/controls/Order'
+import ProductsList from '../components/shop/products/ProductsList'
+import ProductsCount from '../components/shop/products/ProductsCount'
+import Cart from '../components/shop/cart/Cart'
 
 export default function Shop() {
     

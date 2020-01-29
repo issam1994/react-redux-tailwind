@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch} from 'react-redux'
-import {addToCart} from '../../store/actions/shopActions'
+import {addToCart} from '../../../store/actions/shopActions'
 
 export default function Product({product}) {
     //extract data from props

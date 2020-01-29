@@ -1,5 +1,5 @@
 import React, {useContext, useMemo} from 'react';
-import {ProductsContext} from './productsContext'
+import {ProductsContext} from '../context'
 export default function Sizes() {
     const {products, filters, setFilters} = useContext(ProductsContext)
     //state

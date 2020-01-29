@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 //redux hooks
 import { useSelector, useDispatch } from 'react-redux'
 //redux action
-import { toggleCart } from '../../store/actions/shopActions'
+import { toggleCart } from '../../../store/actions/shopActions'
 import CartItemsList from './CartItemsList'
 import { mdiCartOutline } from '@mdi/js'
 
