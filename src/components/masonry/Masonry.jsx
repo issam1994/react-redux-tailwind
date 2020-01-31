@@ -10,8 +10,9 @@ export default function Masonry() {
                 let res = await fetch('http://www.splashbase.co/api/v1/images/search?query=laptop');
                 let data = await res.json()
                 setImages(data.images)
-            } catch {
-                console.log("failed to fetch images on mounted..")
+            } catch(e) {
+                console.log("failed to fetch images on mounted..", e);
+                fetchImages();
             }
         }
         fetchImages();
