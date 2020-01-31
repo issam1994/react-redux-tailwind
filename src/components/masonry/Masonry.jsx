@@ -12,7 +12,6 @@ export default function Masonry() {
                 setImages(data.images)
             } catch(e) {
                 console.log("failed to fetch images on mounted..", e);
-                fetchImages();
             }
         }
         fetchImages();
