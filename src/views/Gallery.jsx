@@ -1,5 +1,5 @@
 import React from 'react';
-import Masonry from '../components/masonry/Masonry'
+import Masonry from '../components/masonry/Masonry';
 
 export default function Gallery(){
     return (

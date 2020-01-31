@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router} from 'react-router-dom'
 import Nav from './components/Nav'
 import AnimatedViews from './router/index'
+import '../src/extracss.css'
 
 
 //Root Component

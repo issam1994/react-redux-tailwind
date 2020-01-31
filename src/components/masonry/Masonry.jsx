@@ -1,6 +1,4 @@
-import React from 'react'
-import { useState } from 'react'
-import { useEffect } from 'react'
+import React, {useState, useEffect} from 'react'
 
 export default function Masonry() {
     const [images, setImages] = useState([])
@@ -19,9 +17,9 @@ export default function Masonry() {
         fetchImages();
     }, []);
     return (
-        <div className="flex flex-wrap justify-center masonry px-2">
-            {images.map((image, i) => (<div key={i} className="masonry-item p-4 w-full md:w-1/3 lg:w-1/4 transition hover:scale">
-                <img className="object-cover hover:shadow-2xl" src={image.url} alt="" />
+        <div className=" masonry">
+            {images.map((image, i) => (<div key={i} className="masonry-item border transition hover:scale" style={i === 5 ? {height: '400px'} : {}}>
+                <img className="object-cover h-full hover:shadow-2xl" src={image.url} alt={image.url} />
             </div>))}
         </div>
     )
