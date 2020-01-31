@@ -18,8 +18,8 @@ export default function Masonry() {
         fetchImages();
     }, []);
     return (
-        <div className=" masonry">
-            {images.map((image, i) => (<div key={i} className="masonry-item border transition hover:scale" style={i === 5 ? {height: '400px'} : {}}>
+        <div className="px-2 column-count-1 sm:column-count-2 md:column-count-3 lg:column-count-4 transition">
+            {images.map((image, i) => (<div key={i} className="border transition hover:scale" style={i === 5 ? {height: '400px'} : {}}>
                 <img className="object-cover h-full hover:shadow-2xl" src={image.url} alt={image.url} />
             </div>))}
         </div>
