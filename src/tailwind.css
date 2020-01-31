@@ -5,6 +5,15 @@
 * {
   font-family: 'Montserrat', sans-serif;
 }
+.mycontainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@variants hover {
+  .scale {
+    transform: scale(1.2)
+  }
+}
 @responsive {
   .transition {
     transition: all 0.2s ease-in;

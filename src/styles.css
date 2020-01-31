@@ -8352,6 +8352,19 @@ video {
   font-family: 'Montserrat', sans-serif;
 }
 
+.mycontainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.scale {
+  transform: scale(1.2)
+}
+
+.hover\:scale:hover {
+  transform: scale(1.2)
+}
+
 .transition {
   transition: all 0.2s ease-in;
 }

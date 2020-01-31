@@ -4,6 +4,7 @@ import Home from '../views/Home'
 import Counter from '../views/Counter'
 import About from '../views/About'
 import Shop from '../views/Shop'
+import Gallery from '../views/Gallery'
 //router imports
 import {Switch, Route, useLocation } from 'react-router-dom';
 //react-spring
@@ -23,6 +24,7 @@ const AnimatedViews = () => {
         <Route path="/" exact component={Home} />
         <Route path="/counter" component={Counter} />
         <Route path="/shop" component={Shop} />
+        <Route path="/gallery" component={Gallery} />
         <Route path="/about" component={About} />
       </Switch>
     </animated.div>)
