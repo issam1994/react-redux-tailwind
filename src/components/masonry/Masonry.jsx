@@ -6,7 +6,7 @@ export default function Masonry() {
         const fetchImages = async () => {
             try {
                 let terms = ['nature', 'girl', 'mountains', 'laugh', 'beautiful', 'handsome', 'happy', 'cat', 'sea', 'beach', 'bike', 'car', 'dog', 'birds', 'tech', 'art', 'science', 'redhead,girl', 'desert,sun', 'space', 'camel', "dog,cat", "fish", "food", "street", "music", "night", "sport", "marriage", 'vacation']
-                setImages(terms.map(e => ({src: "https://source.unsplash.com/800x900/?" + e, query: e})))
+                setImages(terms.map(e => ({ src: "https://source.unsplash.com/800x900/?" + e, query: e })))
             } catch (e) {
                 console.log("failed to fetch images on mounted..", e);
             }

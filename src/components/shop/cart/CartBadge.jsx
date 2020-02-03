@@ -4,7 +4,6 @@ import { mdiCartOutline } from '@mdi/js'
 
 export default function CartBadge() {
     const itemsCount = useSelector(state => state.shop.cart.length)
-
     return (
         <>
             {/* cart icon with badge  */}
