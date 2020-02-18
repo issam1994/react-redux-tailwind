@@ -7,6 +7,7 @@ function Nav() {
         { name: 'Counter', path: '/counter' },
         { name: 'Shop', path: '/shop' },
         { name: 'Gallery', path: '/gallery' },
+        { name: 'Form', path: '/form' },
     ];
     let currentPath = useLocation().pathname
     return (
