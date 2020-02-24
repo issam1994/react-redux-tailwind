@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {CSSTransition} from 'react-transition-group'
 
 export default function Popover() {
-    const [show, setShow] = useState(true)
+    const [show, setShow] = useState(false)
     return (
         <div className="relative rounded text-lg text-left font-normal">
             {show && <div className="fixed inset-0 bg-transparent" onClick={() => setShow(false)}></div>}
